@@ -1,23 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Actividades</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Prácticas Web | HugoPLR</title>
+    <!-- Fuente Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Rejilla de Tarjetas */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-top: 5px solid #2a5298;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            color: #1e3c72;
+            margin-bottom: 0.8rem;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* Enlaces */
+        .card a {
+            display: block;
+            text-decoration: none;
+            color: #2a5298;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: #f0f4f9;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .card a:hover {
+            background: #2a5298;
+            color: white;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 12px;
+            background: #e1f5fe;
+            color: #0288d1;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            background: #1e3c72;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-	<p><strong><i>ACTIVIDADES</i></strong><hr></p>
-		<p>Actividad1  <a href="actividad1/ejercicio1.html"target="_blank">Ejercicio1</a></p>
-		<p>Actividad1  <a href="actividad1/ejercicio2.html"target="_blank">Ejercicio2</a></p>
-		<p>Actividad1  <a href="actividad1/ejercicio3.html"target="_blank">Ejercicio3</a></p>
-		<p>Actividad2  <a href="actividad2/actividad2.html"target="_blank">Ejercicio1</a></p>
-		<p>Actividad2  <a href="actividad2/tablas.html"target="_blank">Tablas_Horario</a></p>
-		<p>Actividad3  <a href="actividad3/formularios.html"target="_blank">formulario</a></p>
-		<p>Actividad4  <a href="actividad4/noticias_texto.html"target="_blank">Noticias_texto</a></p>
-		<p>Actividad4  <a href="actividad4/noticias_div.html"target="_blank">Noticias_div</a></p>
-		<p>Actividad4  <a href="actividad4/noticias_semantico.html"target="_blank">Noticias_semantico</a></p>
-		<p>Estilos Actividad1 <a href="ESTILOS/Actividad1/estilos_ejercicio1.html"target="_blank">Estilos_Act1 Ejercicio1</a></p>
 
-	
+    <header>
+        <h1>Desarrollo Web — Portfolio</h1>
+        <p>Índice de Prácticas y Ejercicios | HugoPLR</p>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+
+            <!-- BLOQUE 1: Actividades HTML5 -->
+            <article class="card">
+                <div>
+                    <span class="badge">Estructura HTML5</span>
+                    <h2>Actividades Principales</h2>
+                    <ul>
+                        <li><a href="actividad1/">Actividad 1: Ejercicios HTML</a></li>
+                        <li><a href="actividad2/">Actividad 2: Estructura</a></li>
+                        <li><a href="actividad3/">Actividad 3: Formato</a></li>
+                        <li><a href="actividad4/noticias_semantico.html">Actividad 4: Noticias Semántico</a></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- BLOQUE 2: Estilos - Cajas y Proyectos -->
+            <article class="card">
+                <div>
+                    <span class="badge">CSS3 Modelo de Cajas</span>
+                    <h2>Estilos: Cajas y Maquetación</h2>
+                    <ul>
+                        <li><a href="ESTILOS/Actividad1/estilos_cajas_ejercicio1.html">Modelo de Cajas (Ej. 1)</a></li>
+                        <li><a href="ESTILOS/Actividad1/estilos_ejercicio1.html">Estilos Básicos (Ej. 1)</a></li>
+                        <li><a href="ESTILOS/Actividad1/festival.html">Festival de Colores</a></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- BLOQUE 3: Estilos - Posicionamiento CSS -->
+            <article class="card">
+                <div>
+                    <span class="badge">CSS3 Posicionamiento</span>
+                    <h2>Estilos: Posicionamiento</h2>
+                    <ul>
+                        <li><a href="ESTILOS/Actividad1/Ejercicio-1-Relativo.html">Ejercicio 1: Relativo</a></li>
+                        <li><a href="ESTILOS/Actividad1/Ejercicio-2-Absoluto.html">Ejercicio 2: Absoluto</a></li>
+                        <li><a href="ESTILOS/Actividad1/Ejercicio-2.html">Ejercicio 2: General</a></li>
+                        <li><a href="ESTILOS/Actividad1/Ejercicio-3-fixed.html">Ejercicio 3: Fijo (Fixed)</a></li>
+                        <li><a href="ESTILOS/Actividad1/Ejercicio-4-index.html">Ejercicio 4: Index</a></li>
+                        <li><a href="ESTILOS/Actividad1/Ejercicio-5-Posicionamiento%20en%20la%20imagen.html">Ejercicio 5: Sobre Imagen</a></li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 HugoPLR | Repositorio GitHub de Desarrollo Web</p>
+    </footer>
+
 </body>
 </html>
