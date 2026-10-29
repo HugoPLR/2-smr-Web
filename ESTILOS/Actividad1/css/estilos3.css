@@ -1,43 +1,49 @@
 /* 
-  box-sizing: border-box asegura que el padding y el border 
-  se incluyan dentro del ancho y alto total asignado a cada elemento.
+  box-sizing: border-box tamaño de caja con el padding y el border dentro del ancho y alto total asignado.
 */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 body {
     margin: 0 auto;
     max-width: 1100px;
-    background-color: lightyellow;
-    font-family: Arial, sans-serif;
+    background-color: #ffffb2;
+    font-family: Arial1;
     padding: 10px;
 }
 
 /* Título con la fuente Audiowide importada de Google Fonts */
 header h1 {
-    font-family: 'Audiowide', cursive, sans-serif;
+    font-family: Audiowide;
     text-align: center;
     color: blue;
-    padding: 15px 0;
-    font-size: 2.2rem;
+    padding: 15px;
 }
 
 /* Menú de navegación horizontal */
 nav {
     background-color: pink;
-    padding: 8px 15px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+nav ul li {
+    float: left;
 }
 
 nav ul li a {
+    display: block;
+    text-emphasis: center;
+    padding: 14px 16px;
     text-decoration: none;
     color: blue;
     font-weight: bold;
@@ -45,7 +51,8 @@ nav ul li a {
 
 /* Pseudoetiqueta :hover para cambiar el color del enlace al pasar el ratón */
 nav ul li a:hover {
-    color: purple;
+    background-color: #e6e6e6;
+    color:red;
 }
 
 /* Bloque destacado con borde punteado */
@@ -53,8 +60,7 @@ nav ul li a:hover {
     border: 2px dashed orange;
     padding: 10px;
     margin: 20px 0;
-    background-color: lightyellow;
-    color: #333;
+    background-color: #ffffe5;
 }
 
 /* Contenedor principal para organizar las cajas y la sección aside */
@@ -75,7 +81,7 @@ nav ul li a:hover {
     border: 2px solid blue;
     padding: 15px;
     flex: 1;
-    background-color: lightyellow;
+    background-color: #ffffb2;
 }
 
 /* Pseudoselector: Primer párrafo dentro de la caja */
@@ -127,10 +133,13 @@ aside h2 {
 /* Pie de página */
 footer {
     margin-top: 30px;
-    font-size: 0.9rem;
-    color: #333;
 }
 
 footer p {
     margin-bottom: 5px;
+}
+
+.footer2 {
+    color: gray;
+    text-decoration-color: gray;
 }
