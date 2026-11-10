@@ -1,0 +1,242 @@
+/* Variables globales */
+:root {
+    --padding-container: 40px 0;
+}
+
+/* Reseteo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor flexible reutilizable */
+.mi_contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+/* Configuración del Header Flexbox */
+.mi_header {
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    max-height: 750px;
+    position: relative;
+}
+
+/* Fondo con gradiente y la imagen de fondo_header3.jpg */
+.mi_header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(0, 0, 0, 0.55) 100%
+    ),
+    url("../img/fondo_header3.jpg"); /* Cambiado a fondo_header3.jpg */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+    z-index: -1;
+}
+
+
+/* Menú de navegación con Flexbox */
+.mi_menu {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 90px;
+    align-items: center;
+    --padding-container: 0;
+}
+
+/* Logo */
+.logo {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Enlaces de navegación */
+.menu_nav {
+    flex: 2 1 65%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu_nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu_nav a:hover {
+    color: #82b1ff;
+}
+
+/* Iconos redes sociales */
+.menu_social {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu_social a {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.menu_social a:hover {
+    transform: scale(1.15);
+}
+
+.menu_social a img {
+    filter: brightness(0) invert(1);
+}
+
+/* Bloque central dentro del Header */
+.header_container {
+    height: calc(100% - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header_card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    padding: 35px 30px;
+    max-width: 680px;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.header_title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.header_paragraph {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #0066ff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #004ecc;
+}
+
+/* Rejilla del Portfolio (Main) */
+.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-top: 5px solid #2a5298;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    color: #1e3c72;
+    margin-bottom: 0.8rem;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    margin-bottom: 0.6rem;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: #2a5298;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #f0f4f9;
+    transition: background 0.2s, color 0.2s;
+}
+
+.card a:hover {
+    background: #2a5298;
+    color: white;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background: #e1f5fe;
+    color: #0288d1;
+    margin-bottom: 0.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background: #1e3c72;
+    color: white;
+    font-size: 0.9rem;
+}

@@ -4,141 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Prácticas Web | HugoPLR</title>
-    <!-- Fuente Google Fonts -->
+    <!-- Fuentes Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Encabezado */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            text-align: center;
-            padding: 2.5rem 1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-top: 5px;
-        }
-
-        /* Contenedor principal */
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Rejilla de Tarjetas */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* Tarjetas */
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border-top: 5px solid #2a5298;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-        }
-
-        .card h2 {
-            font-size: 1.25rem;
-            color: #1e3c72;
-            margin-bottom: 0.8rem;
-        }
-
-        .card ul {
-            list-style: none;
-        }
-
-        .card ul li {
-            margin-bottom: 0.6rem;
-        }
-
-        /* Enlaces */
-        .card a {
-            display: block;
-            text-decoration: none;
-            color: #2a5298;
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 6px;
-            background: #f0f4f9;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .card a:hover {
-            background: #2a5298;
-            color: white;
-        }
-
-        /* Badges */
-        .badge {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            padding: 3px 8px;
-            border-radius: 12px;
-            background: #e1f5fe;
-            color: #0288d1;
-            margin-bottom: 0.8rem;
-        }
-
-        /* Pie de página */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            background: #1e3c72;
-            color: white;
-            font-size: 0.9rem;
-        }
-    </style>
+    <!-- Enlace CSS a la ruta exacta -->
+    <link rel="stylesheet" href="ESTILOS/Actividad1/css/estilos_index.css">
 </head>
 <body>
 
-    <header>
-        <h1>Desarrollo Web — Portfolio</h1>
-        <p>Índice de Prácticas y Ejercicios | HugoPLR</p>
+    <!-- Header principal con Flexbox y fondo recortado -->
+    <header class="mi_header">
+        <nav class="mi_menu mi_contenedor">
+            <div class="logo">
+                <a href="#">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <nav class="menu_nav">
+                <a href="#html">HTML5</a>
+                <a href="#cajas">Cajas CSS</a>
+                <a href="#posicionamiento">Posicionamiento</a>
+                <a href="#">Contacto</a>
+            </nav>
+
+            <div class="menu_social">
+                <a href="#" title="Instagram">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="#" title="WhatsApp">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+                <a href="#" title="YouTube">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </nav>
+
+        <section class="header_container mi_contenedor">
+            <div class="header_card">
+                <h1 class="header_title">Desarrollo Web — Portfolio</h1>
+                <p class="header_paragraph">
+                    Índice de prácticas y ejercicios desarrollados en HTML5 y CSS3. Explora los módulos de maquetación semántica, modelo de cajas y posicionamiento avanzado.
+                </p>
+                <a href="#proyectos" class="cta">Ver Proyectos</a>
+            </div>
+        </section>
     </header>
 
-    <main class="container">
+    <!-- Rejilla de proyectos del portfolio -->
+    <main class="container" id="proyectos">
         <div class="grid">
 
             <!-- BLOQUE 1: Actividades HTML5 -->
-            <article class="card">
+            <article class="card" id="html">
                 <div>
                     <span class="badge">Estructura HTML5</span>
                     <h2>Actividades Principales</h2>
@@ -152,7 +72,7 @@
             </article>
 
             <!-- BLOQUE 2: Estilos - Cajas y Proyectos -->
-            <article class="card">
+            <article class="card" id="cajas">
                 <div>
                     <span class="badge">CSS3 Modelo de Cajas</span>
                     <h2>Estilos: Cajas y Maquetación</h2>
@@ -165,7 +85,7 @@
             </article>
 
             <!-- BLOQUE 3: Estilos - Posicionamiento CSS -->
-            <article class="card">
+            <article class="card" id="posicionamiento">
                 <div>
                     <span class="badge">CSS3 Posicionamiento</span>
                     <h2>Estilos: Posicionamiento</h2>
